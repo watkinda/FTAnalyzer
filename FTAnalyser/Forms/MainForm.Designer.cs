@@ -44,8 +44,8 @@ namespace FTAnalyzer
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.openGedcom = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -249,6 +249,7 @@ namespace FTAnalyzer
             this.relTypesCensus = new FTAnalyzer.Controls.RelationTypes();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.BtnAutoCreatedCensusFacts = new System.Windows.Forms.Button();
             this.BtnProblemCensusFacts = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDuplicateCensus = new System.Windows.Forms.Button();
@@ -287,6 +288,9 @@ namespace FTAnalyzer
             this.pbIndividuals = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.pbSources = new System.Windows.Forms.ProgressBar();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.rtbOutput = new FTAnalyzer.Utilities.ScrollingRichTextBox();
             this.tabSelector = new System.Windows.Forms.TabControl();
             this.tabMainLists = new System.Windows.Forms.TabPage();
@@ -370,7 +374,6 @@ namespace FTAnalyzer
             this.rtbToday = new FTAnalyzer.Utilities.ScrollingRichTextBox();
             this.saveDatabase = new System.Windows.Forms.SaveFileDialog();
             this.restoreDatabase = new System.Windows.Forms.OpenFileDialog();
-            this.BtnAutoCreatedCensusFacts = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.mnuSetRoot.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -1226,14 +1229,14 @@ namespace FTAnalyzer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgDataErrors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgDataErrors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDataErrors.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDataErrors.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgDataErrors.Location = new System.Drawing.Point(0, 166);
             this.dgDataErrors.Name = "dgDataErrors";
             this.dgDataErrors.ReadOnly = true;
@@ -1284,14 +1287,14 @@ namespace FTAnalyzer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgCheckAncestors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgCheckAncestors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCheckAncestors.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCheckAncestors.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgCheckAncestors.Location = new System.Drawing.Point(-1, 84);
             this.dgCheckAncestors.Name = "dgCheckAncestors";
             this.dgCheckAncestors.ReadOnly = true;
@@ -2452,6 +2455,16 @@ namespace FTAnalyzer
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Census Facts";
             // 
+            // BtnAutoCreatedCensusFacts
+            // 
+            this.BtnAutoCreatedCensusFacts.Location = new System.Drawing.Point(164, 21);
+            this.BtnAutoCreatedCensusFacts.Name = "BtnAutoCreatedCensusFacts";
+            this.BtnAutoCreatedCensusFacts.Size = new System.Drawing.Size(150, 23);
+            this.BtnAutoCreatedCensusFacts.TabIndex = 39;
+            this.BtnAutoCreatedCensusFacts.Text = "Auto Created Census Facts";
+            this.BtnAutoCreatedCensusFacts.UseVisualStyleBackColor = true;
+            this.BtnAutoCreatedCensusFacts.Click += new System.EventHandler(this.BtnCensusAutoCreatedFacts_Click);
+            // 
             // BtnProblemCensusFacts
             // 
             this.BtnProblemCensusFacts.Location = new System.Drawing.Point(6, 21);
@@ -2794,6 +2807,9 @@ namespace FTAnalyzer
             // 
             // splitGedcom.Panel2
             // 
+            this.splitGedcom.Panel2.Controls.Add(this.linkLabel3);
+            this.splitGedcom.Panel2.Controls.Add(this.linkLabel1);
+            this.splitGedcom.Panel2.Controls.Add(this.textBox1);
             this.splitGedcom.Panel2.Controls.Add(this.rtbOutput);
             this.splitGedcom.Size = new System.Drawing.Size(1078, 437);
             this.splitGedcom.SplitterDistance = 110;
@@ -2901,6 +2917,42 @@ namespace FTAnalyzer
             this.pbSources.Size = new System.Drawing.Size(275, 16);
             this.pbSources.TabIndex = 9;
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Location = new System.Drawing.Point(5, 249);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(611, 37);
+            this.linkLabel3.TabIndex = 19;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "GitHub Release version (manual updates)";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(3, 194);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(638, 37);
+            this.linkLabel1.TabIndex = 18;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Windows Store version (automatic updates)";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(6, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(853, 177);
+            this.textBox1.TabIndex = 17;
+            this.textBox1.Text = "Sorry this ClickOnce version of FTAnalyzer no longer functions please uninstall a" +
+    "nd download the Windows Store version or the website released version.";
+            // 
             // rtbOutput
             // 
             this.rtbOutput.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2987,8 +3039,8 @@ namespace FTAnalyzer
             this.dgIndividuals.Size = new System.Drawing.Size(1064, 405);
             this.dgIndividuals.TabIndex = 1;
             this.dgIndividuals.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgIndividuals_CellDoubleClick);
-            this.dgIndividuals.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DgIndividuals_MouseDown);
             this.dgIndividuals.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgIndividuals_DataBindingComplete);
+            this.dgIndividuals.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DgIndividuals_MouseDown);
             // 
             // tabFamilies
             // 
@@ -3850,16 +3902,6 @@ namespace FTAnalyzer
             this.restoreDatabase.FileName = "*.zip";
             this.restoreDatabase.Filter = "Gecode Databases | *.s3db | Zip Files | *.zip";
             // 
-            // BtnAutoCreatedCensusFacts
-            // 
-            this.BtnAutoCreatedCensusFacts.Location = new System.Drawing.Point(164, 21);
-            this.BtnAutoCreatedCensusFacts.Name = "BtnAutoCreatedCensusFacts";
-            this.BtnAutoCreatedCensusFacts.Size = new System.Drawing.Size(150, 23);
-            this.BtnAutoCreatedCensusFacts.TabIndex = 39;
-            this.BtnAutoCreatedCensusFacts.Text = "Auto Created Census Facts";
-            this.BtnAutoCreatedCensusFacts.UseVisualStyleBackColor = true;
-            this.BtnAutoCreatedCensusFacts.Click += new System.EventHandler(this.BtnCensusAutoCreatedFacts_Click);
-            // 
             // MainForm
             // 
             this.AllowDrop = true;
@@ -3939,6 +3981,7 @@ namespace FTAnalyzer
             this.tabDisplayProgress.ResumeLayout(false);
             this.splitGedcom.Panel1.ResumeLayout(false);
             this.splitGedcom.Panel2.ResumeLayout(false);
+            this.splitGedcom.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitGedcom)).EndInit();
             this.splitGedcom.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -4309,6 +4352,9 @@ namespace FTAnalyzer
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Button BtnProblemCensusFacts;
         private System.Windows.Forms.Button BtnAutoCreatedCensusFacts;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

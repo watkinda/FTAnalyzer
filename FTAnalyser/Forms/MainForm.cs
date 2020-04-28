@@ -30,7 +30,7 @@ namespace FTAnalyzer
 {
     public partial class MainForm : Form
     {
-        public static string VERSION = "7.8.0.0-beta4";
+        public static string VERSION = "7.6.4.9999";
 
         static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -201,45 +201,47 @@ namespace FTAnalyzer
         #region Load File
         async Task LoadFileAsync(string filename)
         {
-            try
-            {
-                HourGlass(true);
-                this.filename = filename;
-                CloseGEDCOM(false);
-                if (!stopProcessing)
-                {
-                    // document.Save("GedcomOutput.xml");
-                    if (await LoadTreeAsync(filename).ConfigureAwait(true))
-                    {
-                        SetDataErrorsCheckedDefaults(ckbDataErrors);
-                        SetupFactsCheckboxes();
-                        AddFileToRecentList(filename);
-                        Text = $"Family Tree Analyzer v{VERSION}. Analysing: {filename}";
-                        Application.UseWaitCursor = false;
-                        mnuCloseGEDCOM.Enabled = true;
-                        EnableLoadMenus();
-                        ShowMenus(true);
-                        MessageBox.Show($"Gedcom File {filename} Loaded", "FTAnalyzer");
-                    }
-                    else
-                        CleanUp(true);
-                }
-            }
-            catch (IOException ex)
-            {
-                MessageBox.Show($"Error: Could not read file from disk. Original error: {ex.Message}", "FTAnalyzer");
-            }
-            catch (Exception ex2)
-            {
-                string message = ex2.Message + "\n" + (ex2.InnerException != null ? ex2.InnerException.Message : string.Empty);
-                MessageBox.Show("Error: Problem processing your file. Please try again.\n" +
-                    "If this problem persists please report this at http://www.ftanalyzer.com/issues. Error was: " + message + "\n" + ex2.InnerException, "FTAnalyzer");
-                CleanUp(true);
-            }
-            finally
-            {
-                HourGlass(false);
-            }
+            UIHelpers.ShowMessage("Sorry this version no longer functions please uninstall and load the Windows Store or Website Release version");
+            return;
+            //try
+            //{
+            //    HourGlass(true);
+            //    this.filename = filename;
+            //    CloseGEDCOM(false);
+            //    if (!stopProcessing)
+            //    {
+            //        // document.Save("GedcomOutput.xml");
+            //        if (await LoadTreeAsync(filename).ConfigureAwait(true))
+            //        {
+            //            SetDataErrorsCheckedDefaults(ckbDataErrors);
+            //            SetupFactsCheckboxes();
+            //            AddFileToRecentList(filename);
+            //            Text = $"Family Tree Analyzer v{VERSION}. Analysing: {filename}";
+            //            Application.UseWaitCursor = false;
+            //            mnuCloseGEDCOM.Enabled = true;
+            //            EnableLoadMenus();
+            //            ShowMenus(true);
+            //            MessageBox.Show($"Gedcom File {filename} Loaded", "FTAnalyzer");
+            //        }
+            //        else
+            //            CleanUp(true);
+            //    }
+            //}
+            //catch (IOException ex)
+            //{
+            //    MessageBox.Show($"Error: Could not read file from disk. Original error: {ex.Message}", "FTAnalyzer");
+            //}
+            //catch (Exception ex2)
+            //{
+            //    string message = ex2.Message + "\n" + (ex2.InnerException != null ? ex2.InnerException.Message : string.Empty);
+            //    MessageBox.Show("Error: Problem processing your file. Please try again.\n" +
+            //        "If this problem persists please report this at http://www.ftanalyzer.com/issues. Error was: " + message + "\n" + ex2.InnerException, "FTAnalyzer");
+            //    CleanUp(true);
+            //}
+            //finally
+            //{
+            //    HourGlass(false);
+            //}
         }
 
         async Task<bool> LoadTreeAsync(string filename)
@@ -3413,6 +3415,16 @@ namespace FTAnalyzer
                 UIHelpers.ShowMessage(ex.Message, "FTAnalyzer");
             }
             HourGlass(false);
+        }
+
+        void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SpecialMethods.VisitWebsite("https://www.microsoft.com/en-gb/p/ftanalyzer/9pmjl9hvpl7x?cid=clickonceinstall");
+        }
+
+        void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SpecialMethods.VisitWebsite("http://www.ftanalyzer.com/releases");
         }
     }
 }
