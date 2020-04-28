@@ -2920,10 +2920,10 @@ namespace FTAnalyzer
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.Location = new System.Drawing.Point(5, 249);
+            this.linkLabel3.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Location = new System.Drawing.Point(5, 233);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(611, 37);
+            this.linkLabel3.Size = new System.Drawing.Size(558, 39);
             this.linkLabel3.TabIndex = 19;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "GitHub Release version (manual updates)";
@@ -2932,10 +2932,10 @@ namespace FTAnalyzer
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(3, 194);
+            this.linkLabel1.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(5, 182);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(638, 37);
+            this.linkLabel1.Size = new System.Drawing.Size(591, 39);
             this.linkLabel1.TabIndex = 18;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Windows Store version (automatic updates)";
@@ -2944,11 +2944,11 @@ namespace FTAnalyzer
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 3);
+            this.textBox1.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(6, 13);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(853, 177);
+            this.textBox1.Size = new System.Drawing.Size(919, 154);
             this.textBox1.TabIndex = 17;
             this.textBox1.Text = "Sorry this ClickOnce version of FTAnalyzer no longer functions please uninstall a" +
     "nd download the Windows Store version or the website released version.";
@@ -2956,7 +2956,7 @@ namespace FTAnalyzer
             // rtbOutput
             // 
             this.rtbOutput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbOutput.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbOutput.Location = new System.Drawing.Point(0, 0);
             this.rtbOutput.Name = "rtbOutput";
             this.rtbOutput.ReadOnly = true;

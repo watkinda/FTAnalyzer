@@ -49,12 +49,12 @@
     <TargetCulture>en</TargetCulture>
     <ProductName>FT Analyzer</ProductName>
     <PublisherName>FT Analyzer</PublisherName>
-    <MinimumRequiredVersion>7.6.3.9999</MinimumRequiredVersion>
+    <MinimumRequiredVersion>7.6.4.9999</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>10000</ApplicationRevision>
-    <ApplicationVersion>7.6.3.%2a</ApplicationVersion>
+    <ApplicationRevision>9999</ApplicationRevision>
+    <ApplicationVersion>7.6.4.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
