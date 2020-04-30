@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using System.Xml;
 using HtmlAgilityPack;
 using System.Net;
-
+using System.Security.Permissions;
 
 namespace FTAnalyzer
 {
@@ -37,7 +37,7 @@ namespace FTAnalyzer
         Cursor storedCursor = Cursors.Default;
         readonly FamilyTree ft = FamilyTree.Instance;
         bool stopProcessing = false;
-        string filename;
+        string filename = string.Empty;
         readonly PrivateFontCollection fonts = new PrivateFontCollection();
         Font handwritingFont;
         Font boldFont;
@@ -48,6 +48,10 @@ namespace FTAnalyzer
 
         public MainForm()
         {
+            stopProcessing = false;
+            filename = "meaningless";
+            if (stopProcessing)
+                MessageBox.Show(filename);
             InitializeComponent();
             loading = true;
             FamilyTree.Instance.Version = $"v{VERSION}";
@@ -199,7 +203,9 @@ namespace FTAnalyzer
         #endregion
 
         #region Load File
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         async Task LoadFileAsync(string filename)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             UIHelpers.ShowMessage("Sorry this version no longer functions please uninstall and load the Windows Store or Website Release version");
             return;
